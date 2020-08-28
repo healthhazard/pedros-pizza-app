@@ -1,0 +1,57 @@
+:host {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 32px auto 18px;
+  max-width: 1000px;
+  padding: 12px;
+
+  table {
+    flex: 1;
+    margin-bottom: 38px;
+
+    th {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .mat-column-time {
+      width: 120px;
+    }
+
+    .mat-column-customer {
+      width: 220px;
+    }
+
+    .mat-column-pizza {
+      width: 240px;
+    }
+  }
+
+  #form {
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(50, 50, 50, 0.2);
+    border-radius: 2px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(50, 50, 50, 0.4);
+    display: flex;
+    padding: 12px;
+    padding-bottom: 2px;
+
+    form {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      justify-content: space-around;
+
+      button {
+        height: 48px;
+      }
+    }
+  }
+
+  mat-form-field {
+    font-size: 20px;
+  }
+}

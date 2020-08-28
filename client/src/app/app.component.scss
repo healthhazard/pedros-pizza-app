@@ -1,0 +1,26 @@
+:host {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+
+  #host {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    h1 {
+      color: rgba(70, 70, 70, 1);
+      font-size: 48px;
+      margin: 32px auto 24px;
+    }
+
+    ::ng-deep .mat-tab-label {
+      font-size: 28px;
+    }
+
+    mat-tab-group {
+      flex: 1;
+    }
+  }
+}

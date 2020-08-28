@@ -1,0 +1,70 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Client - Install Dependencies",
+      "type": "shell",
+      "command": "npm install",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/client"
+      }
+    },
+    {
+      "label": "Server - Install Dependencies",
+      "type": "shell",
+      "command": "npm install",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/server"
+      }
+    },
+    {
+      "label": "Client - Build",
+      "type": "shell",
+      "command": "npm run build",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/client"
+      }
+    },
+    {
+      "label": "Server - Build",
+      "type": "shell",
+      "command": "npm run build",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/server"
+      }
+    },
+    {
+      "label": "Client - Serve",
+      "type": "shell",
+      "command": "npm run serve",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/client"
+      }
+    },
+    {
+      "label": "Server - Serve",
+      "type": "shell",
+      "command": "npm run serve",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/server"
+      }
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "command": "node ./server/dist/main.js",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ]
+}

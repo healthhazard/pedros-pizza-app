@@ -1,0 +1,1 @@
+export { AppOrderGateway } from './order.gateway'

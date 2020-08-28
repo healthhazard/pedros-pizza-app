@@ -1,0 +1,1 @@
+export { AppPizzaController } from './pizza.controller'

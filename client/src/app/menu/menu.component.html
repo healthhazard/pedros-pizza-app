@@ -1,0 +1,16 @@
+<!-- <h2>Speisekarte</h2> -->
+
+<div class="pizzas">
+  <div class="pizza" *ngFor="let pizza of pizzas | async">
+    <span class="id">{{ pizza.id }}</span>
+    <div>
+      <div class="head">
+        <h3>{{ pizza.name }}</h3>
+        <span>{{
+          pizza.prices.normal | currency: "EUR":"symbol":undefined:"de-DE"
+        }}</span>
+      </div>
+      <span class="desc">{{ pizza.description }}</span>
+    </div>
+  </div>
+</div>
