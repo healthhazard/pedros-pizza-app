@@ -1,5 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "ChunkFive-Regular";
+  src: url("./assets/fonts/ChunkFive-Regular.eot"); /* IE9 Compat Modes */
+  src: url("./assets/fonts/ChunkFive-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./assets/fonts/ChunkFive-Regular.otf") format("opentype"),
+    /* Open Type Font */ url("./assets/fonts/ChunkFive-Regular.svg")
+      format("svg"),
+    /* Legacy iOS */ url("./assets/fonts/ChunkFive-Regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("./assets/fonts/ChunkFive-Regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./assets/fonts/ChunkFive-Regular.woff2")
+      format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   height: 100%;
@@ -7,6 +26,6 @@ body {
 body {
   display: flex;
   background: #f5f4f2;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "ChunkFive-Regular", sans-serif;
   margin: 2em;
 }
