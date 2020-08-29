@@ -21,12 +21,13 @@ export class AppOrdersComponent implements OnInit, OnDestroy {
   private readonly orders = new BehaviorSubject<IOrder[]>([]);
   private readonly subs = new Subscription();
   public dataSource = this.orders.asObservable();
-  public displayedColumns: string[] = ['time', 'customer', 'pizza', 'comment'];
+  public displayedColumns: string[] = ['time', 'available'];
   public orderForm = this.formBuilder.group({
     time: ['', Validators.required],
     customer: ['', Validators.required],
-    pizza: ['', Validators.required],
-    comment: [''],
+    phone: ['', Validators.required],
+    salami: [false],
+    mozzarella: [false],
   });
 
   constructor(

@@ -1,3 +1,44 @@
 {
-  "orders": []
+  "orders": [
+    {
+      "time": "12:00",
+      "available": false,
+      "customer": "Customer1",
+      "phone": "+491546843154",
+      "salami": true,
+      "mozzarella": true
+    },
+    {
+      "time": "12:02",
+      "available": false,
+      "customer": "Customer1",
+      "phone": "069412365",
+      "salami": false,
+      "mozzarella": false
+    },
+    {
+      "time": "12:04",
+      "available": false,
+      "customer": "Customer2",
+      "phone": null,
+      "salami": false,
+      "mozzarella": true
+    },
+    {
+      "time": "12:06",
+      "available": false,
+      "customer": "Customer3",
+      "phone": null,
+      "salami": true,
+      "mozzarella": false
+    },
+    {
+      "time": "12:08",
+      "available": true,
+      "customer": "Customer2",
+      "phone": null,
+      "salami": false,
+      "mozzarella": false
+    }
+  ]
 }

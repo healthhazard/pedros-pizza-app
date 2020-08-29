@@ -1,22 +1,12 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="time">
-    <th mat-header-cell *matHeaderCellDef>Uhrzeit</th>
+    <th mat-header-cell *matHeaderCellDef>Abholzeit</th>
     <td mat-cell *matCellDef="let element">{{ element.time }}</td>
   </ng-container>
 
-  <ng-container matColumnDef="customer">
-    <th mat-header-cell *matHeaderCellDef>Für</th>
-    <td mat-cell *matCellDef="let element">{{ element.customer }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="pizza">
-    <th mat-header-cell *matHeaderCellDef>Pizza</th>
-    <td mat-cell *matCellDef="let element">{{ element.pizza }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="comment">
-    <th mat-header-cell *matHeaderCellDef>Notiz</th>
-    <td mat-cell *matCellDef="let element">{{ element.comment }}</td>
+  <ng-container matColumnDef="available">
+    <th mat-header-cell *matHeaderCellDef>Available</th>
+    <td mat-cell *matCellDef="let element">{{ element.available }}</td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -35,16 +25,12 @@
       />
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Für</mat-label>
-      <input matInput placeholder="Für" formControlName="customer" />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Pizza</mat-label>
-      <input matInput placeholder="Pizza" formControlName="pizza" />
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Mein Name" formControlName="customer" />
     </mat-form-field>
     <mat-form-field>
       <mat-label>Notiz</mat-label>
-      <input matInput placeholder="Notiz" formControlName="comment" />
+      <input matInput placeholder="Phone" formControlName="phone" />
     </mat-form-field>
     <button
       type="button"

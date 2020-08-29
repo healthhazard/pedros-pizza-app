@@ -1,6 +1,8 @@
 export interface IOrder {
   time: string;
+  available: boolean;
   customer: string;
-  pizza: string;
-  comment: string;
+  phone: string;
+  salami: boolean;
+  mozzarella: boolean;
 }
