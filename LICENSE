@@ -279,6 +279,15 @@ POSSIBILITY OF SUCH DAMAGES.
 
                      END OF TERMS AND CONDITIONS
 
+Note:
+Individual files contain the following tag instead of the full license text.
+
+    SPDX-License-Identifier: GPL-2.0-only
+
+This enables machine processing of license information based on the SPDX
+License Identifiers that are here available: http://spdx.org/licenses/
+
+
             How to Apply These Terms to Your New Programs
 
   If you develop a new program, and you want it to be of the greatest
