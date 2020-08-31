@@ -24,18 +24,25 @@ export class AppOrderService {
   }
 
   public getOrders() {
-    const publicOrders = this.orders$.getValue();
-    for (let order of publicOrders) {
+    const allOrders = this.orders$.getValue();
+    const publicOrders = [];
+    let id = 0;
+    for (let order of allOrders) {
+      publicOrders[id] = {};
       for (let node in order) {
-        if (node != 'time' && node != 'available') {
-          delete order[node];
+        if (node == 'time' || node == 'available') {
+          publicOrders[id][node] = order[node];
         }
       }
+      id++;
     }
     return publicOrders;
   }
 
   public addOrder(order: IOrder): void {
+    const ts = new Date();
+    order['timestamp'] = ts.toLocaleString();
+    order['available'] = false;
     const oldOrders = this.orders$.getValue();
     const newOrders = [...oldOrders, order];
     this.db.get('orders').push(order).write();
