@@ -20,11 +20,7 @@ export class AppMenuComponent implements OnInit, OnDestroy {
 
   constructor(private readonly appService: AppService) {}
 
-  public ngOnInit(): void {
-    this.appService.getPizzas().subscribe((pizzas: IPizza[]) => {
-      this.pizzas.next(pizzas);
-    });
-  }
+  public ngOnInit(): void {}
 
   public ngOnDestroy(): void {}
 }

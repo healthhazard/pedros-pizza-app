@@ -7,6 +7,7 @@ export class AppPizzaService {
   constructor() {}
 
   public getPizzas() {
-    return pizzas;
+    //TODO: remove this pizza stuff
+    return null;
   }
 }

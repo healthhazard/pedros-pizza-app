@@ -7,6 +7,6 @@ export class AppPizzaController {
 
   @Get()
   getPizzas() {
-    return this.pizzaService.getPizzas();
+    return null;
   }
 }
