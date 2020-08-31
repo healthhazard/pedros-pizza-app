@@ -26,7 +26,7 @@ export class AppOrdersComponent implements OnInit, OnDestroy {
     time: ['', Validators.required],
     customer: ['', Validators.required],
     phone: ['', Validators.required],
-    comment: ['Notiz'],
+    comment: [''],
     salami: [false],
     schinken: [false],
     thunfisch: [false],
