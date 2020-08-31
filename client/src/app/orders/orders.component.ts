@@ -26,8 +26,19 @@ export class AppOrdersComponent implements OnInit, OnDestroy {
     time: ['', Validators.required],
     customer: ['', Validators.required],
     phone: ['', Validators.required],
+    comment: ['Notiz'],
     salami: [false],
+    schinken: [false],
+    thunfisch: [false],
     mozzarella: [false],
+    champignons: [false],
+    paprika: [false],
+    zwiebel: [false],
+    mais: [false],
+    oliven: [false],
+    ananas: [false],
+    peperoni_mild: [false],
+    peperoni_scharf: [false],
   });
 
   constructor(
