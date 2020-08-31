@@ -24,7 +24,15 @@ export class AppOrderService {
   }
 
   public getOrders() {
-    return this.orders$.getValue();
+    const publicOrders = this.orders$.getValue();
+    for (let order of publicOrders) {
+      for (let node in order) {
+        if (node != 'time' && node != 'available') {
+          delete order[node];
+        }
+      }
+    }
+    return publicOrders;
   }
 
   public addOrder(order: IOrder): void {
