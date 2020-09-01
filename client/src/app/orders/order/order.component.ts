@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { AppService } from 'src/app/app.service';
 import { FormBuilder, Validators } from '@angular/forms';
 
@@ -10,7 +10,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class AppOrderComponent implements OnInit {
   public orderForm = this.formBuilder.group({
-    time: ['', Validators.required],
+    time: [this.data.order, Validators.required],
     customer: ['', Validators.required],
     phone: ['', Validators.required],
     comment: [''],
@@ -31,19 +31,24 @@ export class AppOrderComponent implements OnInit {
     private readonly formBuilder: FormBuilder,
     private readonly appService: AppService,
     @Inject(MAT_DIALOG_DATA) public data: any,
+    public dialogRef: MatDialogRef<AppOrderComponent>
   ) { }
 
   ngOnInit(): void {
-    console.log(this.data);
-
+    this.setTime();
   }
 
-  public onSubmit(): void {
+  setTime() {
+    this.orderForm.controls['time'].setValue(this.data.order.time)
+  }
+
+  onSubmit(): void {
     this.appService.sendOrder(this.orderForm.value).subscribe({
       error: (error) => {
         console.log(error);
       },
       complete: () => {
+        this.dialogRef.close()
         this.orderForm.reset();
       },
     });

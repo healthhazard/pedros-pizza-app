@@ -1,11 +1,7 @@
 import {
   Component,
   OnInit,
-  Inject,
 } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { BehaviorSubject, Subscription } from 'rxjs';
-
 import { IOrder } from '../../../../server/src/services/order/order.interface';
 import { AppService } from '../app.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -20,9 +16,7 @@ import { AppOrderComponent } from './order/order.component';
 export class AppOrdersComponent implements OnInit {
   orders: IOrder[] = []
 
-
   constructor(
-    private readonly formBuilder: FormBuilder,
     private readonly appService: AppService,
     public dialog: MatDialog
   ) { }
@@ -36,12 +30,10 @@ export class AppOrdersComponent implements OnInit {
       .getOrders()
       .subscribe((response: { orders: IOrder[] }) => {
         this.orders = this.sortOrders(response.orders);
-        console.log(this.orders);
       });
-
   }
 
-  sortOrders(orders) {
+  sortOrders(orders): IOrder[] {
     return orders.sort((a, b) => {
       if (a.time < b.time) return -1;
       if (a.time > b.time) return 1;
@@ -49,7 +41,7 @@ export class AppOrdersComponent implements OnInit {
     });
   }
 
-  openDialog(order) {
+  openDialog(order): void {
     this.dialog.open(AppOrderComponent, {
       data: {
         order: order

@@ -49,6 +49,10 @@ body {
   font-weight: 100;
 }
 
+.bg-danger {
+  color: #000;
+}
+
 // overriding angular material css
 .mat-tab-header {
   border-bottom: 1px solid rgba(0, 0, 0, .12);
@@ -63,4 +67,8 @@ body {
   &:not(:last-child) {
     border-right: 1px solid rgba(0, 0, 0, .12);
   }
+}
+
+.mat-dialog-container {
+  padding: 0 !important;
 }
