@@ -1,31 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
 
-/* font converted using font-converter.net. thank you! */
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config($font-family: 'ChunkFive-Regular, sans-serif');
+// Override the typography in the core CSS.
+@include mat-core($custom-typography);
+
 @font-face {
   font-family: "ChunkFive-Regular";
-  src: url("./assets/fonts/ChunkFive-Regular.eot"); /* IE9 Compat Modes */
-  src: url("./assets/fonts/ChunkFive-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("./assets/fonts/ChunkFive-Regular.otf") format("opentype"),
-    /* Open Type Font */ url("./assets/fonts/ChunkFive-Regular.svg")
-      format("svg"),
-    /* Legacy iOS */ url("./assets/fonts/ChunkFive-Regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("./assets/fonts/ChunkFive-Regular.woff")
-      format("woff"),
-    /* Modern Browsers */ url("./assets/fonts/ChunkFive-Regular.woff2")
-      format("woff2"); /* Modern Browsers */
+  src: url("./assets/fonts/ChunkFive-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("./assets/fonts/ChunkFive-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("./assets/fonts/ChunkFive-Regular.otf") format("opentype"),
+    /* Open Type Font */
+    url("./assets/fonts/ChunkFive-Regular.svg") format("svg"),
+    /* Legacy iOS */
+    url("./assets/fonts/ChunkFive-Regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("./assets/fonts/ChunkFive-Regular.woff") format("woff"),
+    /* Modern Browsers */
+    url("./assets/fonts/ChunkFive-Regular.woff2") format("woff2");
+  /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
+
+
+
 
 html,
 body {
   height: 100%;
 }
+
 body {
-  display: flex;
   background: #f5f4f2;
   font-family: "ChunkFive-Regular", sans-serif;
-  margin: 2em;
+}
+
+// overriding bootstrap css
+.btn-success {
+  background-color: #1DBF73;
+  border-color: #1DBF73;
+}
+
+.badge {
+  font-weight: 100;
+}
+
+// overriding angular material css
+.mat-tab-header {
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  border-top: 1px solid rgba(0, 0, 0, .12);
+}
+
+.mat-tab-labels {
+  padding: 0.5rem;
+}
+
+.mat-tab-label {
+  &:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, .12);
+  }
 }

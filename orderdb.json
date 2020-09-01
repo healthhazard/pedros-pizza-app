@@ -1,104 +1,364 @@
 {
   "orders": [
     {
+      "time": "11:00",
+      "available": true
+    },
+    {
+      "time": "11:02",
+      "available": true
+    },
+    {
+      "time": "11:04",
+      "available": true
+    },
+    {
+      "time": "11:06",
+      "available": true
+    },
+    {
+      "time": "11:08",
+      "available": true
+    },
+    {
+      "time": "11:10",
+      "available": true
+    },
+    {
+      "time": "11:12",
+      "available": true
+    },
+    {
+      "time": "11:14",
+      "available": true
+    },
+    {
+      "time": "11:16",
+      "available": true
+    },
+    {
+      "time": "11:18",
+      "available": true
+    },
+    {
+      "time": "11:20",
+      "available": true
+    },
+    {
+      "time": "11:22",
+      "available": true
+    },
+    {
+      "time": "11:24",
+      "available": true
+    },
+    {
+      "time": "11:26",
+      "available": true
+    },
+    {
+      "time": "11:28",
+      "available": true
+    },
+    {
+      "time": "11:30",
+      "available": true
+    },
+    {
+      "time": "11:32",
+      "available": true
+    },
+    {
+      "time": "11:34",
+      "available": true
+    },
+    {
+      "time": "11:36",
+      "available": true
+    },
+    {
+      "time": "11:38",
+      "available": true
+    },
+    {
+      "time": "11:40",
+      "available": true
+    },
+    {
+      "time": "11:42",
+      "available": true
+    },
+    {
+      "time": "11:44",
+      "available": true
+    },
+    {
+      "time": "11:46",
+      "available": true
+    },
+    {
+      "time": "11:48",
+      "available": true
+    },
+    {
+      "time": "11:50",
+      "available": true
+    },
+    {
+      "time": "11:52",
+      "available": true
+    },
+    {
+      "time": "11:54",
+      "available": true
+    },
+    {
+      "time": "11:56",
+      "available": true
+    },
+    {
+      "time": "11:58",
+      "available": true
+    },
+    {
       "time": "12:00",
-      "order_timestamp": "28.08.2020 10:15:17",
-      "available": false,
-      "customer": "Customer1",
-      "phone": "+491546843154",
-      "salami": true,
-      "schinken": true,
-      "thunfisch": false,
-      "mozzarella": true,
-      "champignons": true,
-      "paprika": false,
-      "zwiebel": true,
-      "mais": false,
-      "oliven": false,
-      "ananas": false,
-      "peperoni_mild": true,
-      "peperoni_scharf": false,
-      "comment": null
+      "available": true
     },
     {
       "time": "12:02",
-      "order_timestamp": "28.08.2020 10:16:25",
-      "available": false,
-      "customer": "Customer1",
-      "phone": "069412365",
-      "salami": true,
-      "schinken": true,
-      "thunfisch": false,
-      "mozzarella": true,
-      "champignons": true,
-      "paprika": false,
-      "zwiebel": true,
-      "mais": false,
-      "oliven": false,
-      "ananas": false,
-      "peperoni_mild": true,
-      "peperoni_scharf": false,
-      "comment": null
+      "available": true
     },
     {
       "time": "12:04",
-      "order_timestamp": "29.08.2020 23:46:10",
-      "available": false,
-      "customer": "Customer2",
-      "phone": null,
-      "salami": true,
-      "schinken": true,
-      "thunfisch": false,
-      "mozzarella": true,
-      "champignons": true,
-      "paprika": false,
-      "zwiebel": true,
-      "mais": false,
-      "oliven": false,
-      "ananas": false,
-      "peperoni_mild": true,
-      "peperoni_scharf": false,
-      "comment": null
+      "available": true
     },
     {
       "time": "12:06",
-      "order_timestamp": "30.08.2020 08:48:40",
-      "available": false,
-      "customer": "Customer3",
-      "phone": null,
-      "salami": true,
-      "schinken": true,
-      "thunfisch": false,
-      "mozzarella": true,
-      "champignons": true,
-      "paprika": false,
-      "zwiebel": true,
-      "mais": false,
-      "oliven": false,
-      "ananas": false,
-      "peperoni_mild": true,
-      "peperoni_scharf": false,
-      "comment": null
+      "available": true
     },
     {
       "time": "12:08",
-      "order_timestamp": null,
-      "available": true,
-      "customer": null,
-      "phone": null,
-      "salami": false,
-      "schinken": false,
-      "thunfisch": false,
-      "mozzarella": false,
-      "champignons": false,
-      "paprika": false,
-      "zwiebel": false,
-      "mais": false,
-      "oliven": false,
-      "ananas": false,
-      "peperoni_mild": false,
-      "peperoni_scharf": false,
-      "comment": null
+      "available": true
+    },
+    {
+      "time": "12:10",
+      "available": true
+    },
+    {
+      "time": "12:12",
+      "available": true
+    },
+    {
+      "time": "12:14",
+      "available": true
+    },
+    {
+      "time": "12:16",
+      "available": true
+    },
+    {
+      "time": "12:18",
+      "available": true
+    },
+    {
+      "time": "12:20",
+      "available": true
+    },
+    {
+      "time": "12:22",
+      "available": true
+    },
+    {
+      "time": "12:24",
+      "available": true
+    },
+    {
+      "time": "12:26",
+      "available": true
+    },
+    {
+      "time": "12:28",
+      "available": true
+    },
+    {
+      "time": "12:30",
+      "available": true
+    },
+    {
+      "time": "12:32",
+      "available": true
+    },
+    {
+      "time": "12:34",
+      "available": true
+    },
+    {
+      "time": "12:36",
+      "available": true
+    },
+    {
+      "time": "12:38",
+      "available": true
+    },
+    {
+      "time": "12:40",
+      "available": true
+    },
+    {
+      "time": "12:42",
+      "available": true
+    },
+    {
+      "time": "12:44",
+      "available": true
+    },
+    {
+      "time": "12:46",
+      "available": true
+    },
+    {
+      "time": "12:48",
+      "available": true
+    },
+    {
+      "time": "12:50",
+      "available": true
+    },
+    {
+      "time": "12:52",
+      "available": true
+    },
+    {
+      "time": "12:54",
+      "available": true
+    },
+    {
+      "time": "12:56",
+      "available": true
+    },
+    {
+      "time": "12:58",
+      "available": true
+    },
+    {
+      "time": "13:00",
+      "available": true
+    },
+    {
+      "time": "13:02",
+      "available": true
+    },
+    {
+      "time": "13:04",
+      "available": true
+    },
+    {
+      "time": "13:06",
+      "available": true
+    },
+    {
+      "time": "13:08",
+      "available": true
+    },
+    {
+      "time": "13:10",
+      "available": true
+    },
+    {
+      "time": "13:12",
+      "available": true
+    },
+    {
+      "time": "13:14",
+      "available": true
+    },
+    {
+      "time": "13:16",
+      "available": true
+    },
+    {
+      "time": "13:18",
+      "available": true
+    },
+    {
+      "time": "13:20",
+      "available": true
+    },
+    {
+      "time": "13:22",
+      "available": true
+    },
+    {
+      "time": "13:24",
+      "available": true
+    },
+    {
+      "time": "13:26",
+      "available": true
+    },
+    {
+      "time": "13:28",
+      "available": true
+    },
+    {
+      "time": "13:30",
+      "available": true
+    },
+    {
+      "time": "13:32",
+      "available": true
+    },
+    {
+      "time": "13:34",
+      "available": true
+    },
+    {
+      "time": "13:36",
+      "available": true
+    },
+    {
+      "time": "13:38",
+      "available": true
+    },
+    {
+      "time": "13:40",
+      "available": true
+    },
+    {
+      "time": "13:42",
+      "available": true
+    },
+    {
+      "time": "13:44",
+      "available": true
+    },
+    {
+      "time": "13:46",
+      "available": true
+    },
+    {
+      "time": "13:48",
+      "available": true
+    },
+    {
+      "time": "13:50",
+      "available": true
+    },
+    {
+      "time": "13:52",
+      "available": true
+    },
+    {
+      "time": "13:54",
+      "available": true
+    },
+    {
+      "time": "13:56",
+      "available": true
+    },
+    {
+      "time": "13:58",
+      "available": true
     }
   ]
 }

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppMenuComponent } from './menu.component';
 
 const ngModules = [CommonModule];
 
-const matModules = [MatTableModule];
+const matModules = [MatTableModule, MatCardModule];
 
 @NgModule({
   declarations: [AppMenuComponent],
