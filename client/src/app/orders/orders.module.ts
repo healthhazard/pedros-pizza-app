@@ -5,21 +5,27 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
+import { MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { AppOrdersComponent } from './orders.component';
+import { AppOrderComponent } from './order/order.component';
 
 const ngModules = [CommonModule, ReactiveFormsModule];
-
+const components = [AppOrdersComponent, AppOrderComponent]
 const matModules = [
   MatButtonModule,
   MatInputModule,
   MatTableModule,
   MatCheckboxModule,
+  MatDialogModule
 ];
 
 @NgModule({
-  declarations: [AppOrdersComponent],
+  declarations: [...components],
   imports: [...ngModules, ...matModules],
-  exports: [AppOrdersComponent],
+  exports: [...components],
+  providers: [
+    { provide: MAT_DIALOG_DATA, useValue: {} },
+    { provide: MatDialogRef, useValue: {} }
+  ]
 })
-export class AppOrdersModule {}
+export class AppOrdersModule { }

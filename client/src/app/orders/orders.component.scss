@@ -1,57 +1,21 @@
-:host {
-  box-sizing: border-box;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  margin: 32px auto 18px;
-  max-width: 1000px;
-  padding: 12px;
+// scrollable pizza list
+.timeslot-list {
+  height: 66vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  // box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 1);
 
-  table {
-    flex: 1;
-    margin-bottom: 38px;
-
-    th {
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .mat-column-time {
-      width: 120px;
-    }
-
-    .mat-column-customer {
-      width: 220px;
-    }
-
-    .mat-column-pizza {
-      width: 240px;
-    }
+  &::-webkit-scrollbar {
+    display: none;
   }
+}
 
-  #form {
-    background: rgba(255, 255, 255, 1);
-    border: 1px solid rgba(50, 50, 50, 0.2);
-    border-radius: 2px;
-    box-sizing: border-box;
-    box-shadow: 0 0 10px rgba(50, 50, 50, 0.4);
-    display: flex;
-    padding: 12px;
-    padding-bottom: 2px;
+//pizza card 
 
-    form {
-      align-items: center;
-      display: flex;
-      flex: 1;
-      justify-content: space-around;
+.card {
+  margin-top: 1rem;
 
-      button {
-        height: 48px;
-      }
-    }
-  }
-
-  mat-form-field {
-    font-size: 20px;
+  &:last-child {
+    margin-bottom: 1rem;
   }
 }

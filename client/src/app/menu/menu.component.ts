@@ -18,9 +18,9 @@ import { AppService } from '../app.service';
 export class AppMenuComponent implements OnInit, OnDestroy {
   public readonly pizzas = new BehaviorSubject<IPizza[]>([]);
 
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
 
-  public ngOnInit(): void {}
+  public ngOnInit(): void { }
 
-  public ngOnDestroy(): void {}
+  public ngOnDestroy(): void { }
 }

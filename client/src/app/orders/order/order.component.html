@@ -1,0 +1,35 @@
+<div id="form">
+    <form [formGroup]="orderForm">
+        <mat-form-field>
+            <mat-label>Uhrzeit</mat-label>
+            <input type="time" matInput formControlName="time" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Mein Name" formControlName="customer" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Telefon</mat-label>
+            <input matInput placeholder="Tel" formControlName="phone" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Notiz</mat-label>
+            <input matInput placeholder="Bemerkung" formControlName="comment" />
+        </mat-form-field>
+        <mat-checkbox formControlName="salami">Salami</mat-checkbox>
+        <mat-checkbox formControlName="schinken">Schinken</mat-checkbox>
+        <mat-checkbox formControlName="thunfisch">Thunfisch</mat-checkbox>
+        <mat-checkbox formControlName="mozzarella">Mozzarella</mat-checkbox>
+        <mat-checkbox formControlName="champignons">Champignons</mat-checkbox>
+        <mat-checkbox formControlName="paprika">Paprika</mat-checkbox>
+        <mat-checkbox formControlName="zwiebel">Zwiebel</mat-checkbox>
+        <mat-checkbox formControlName="mais">Mais</mat-checkbox>
+        <mat-checkbox formControlName="oliven">Oliven</mat-checkbox>
+        <mat-checkbox formControlName="ananas">Ananas</mat-checkbox>
+        <mat-checkbox formControlName="peperoni_mild">Peperoni mild</mat-checkbox>
+        <mat-checkbox formControlName="peperoni_scharf">Peperoni scharf</mat-checkbox>
+        <button type="button" mat-raised-button color="primary" [disabled]="!orderForm.valid" (click)="onSubmit()">
+            Bestellen
+        </button>
+    </form>
+</div>

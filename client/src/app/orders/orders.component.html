@@ -1,58 +1,10 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <ng-container matColumnDef="time">
-    <th mat-header-cell *matHeaderCellDef>Abholzeit</th>
-    <td mat-cell *matCellDef="let element">{{ element.time }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="available">
-    <th mat-header-cell *matHeaderCellDef>Available</th>
-    <td mat-cell *matCellDef="let element">{{ element.available }}</td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table>
-
-<div id="form">
-  <form [formGroup]="orderForm">
-    <mat-form-field>
-      <mat-label>Uhrzeit</mat-label>
-      <input type="time" matInput formControlName="time" />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Mein Name" formControlName="customer" />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Telefon</mat-label>
-      <input matInput placeholder="Tel" formControlName="phone" />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Notiz</mat-label>
-      <input matInput placeholder="Bemerkung" formControlName="comment" />
-    </mat-form-field>
-    <mat-checkbox formControlName="salami">Salami</mat-checkbox>
-    <mat-checkbox formControlName="schinken">Schinken</mat-checkbox>
-    <mat-checkbox formControlName="thunfisch">Thunfisch</mat-checkbox>
-    <mat-checkbox formControlName="mozzarella">Mozzarella</mat-checkbox>
-    <mat-checkbox formControlName="champignons">Champignons</mat-checkbox>
-    <mat-checkbox formControlName="paprika">Paprika</mat-checkbox>
-    <mat-checkbox formControlName="zwiebel">Zwiebel</mat-checkbox>
-    <mat-checkbox formControlName="mais">Mais</mat-checkbox>
-    <mat-checkbox formControlName="oliven">Oliven</mat-checkbox>
-    <mat-checkbox formControlName="ananas">Ananas</mat-checkbox>
-    <mat-checkbox formControlName="peperoni_mild">Peperoni mild</mat-checkbox>
-    <mat-checkbox formControlName="peperoni_scharf"
-      >Peperoni scharf</mat-checkbox
-    >
-    <button
-      type="button"
-      mat-raised-button
-      color="primary"
-      [disabled]="!orderForm.valid"
-      (click)="onSubmit()"
-    >
-      Bestellen
-    </button>
-  </form>
+<div class="timeslot-list">
+  <div class="card" *ngFor="let order of orders" [ngClass]="{'bg-danger bg-gradient': !order.available}">
+    <div class="card-body d-flex justify-content-between align-items-center  flex-row">
+      <p class="mb-0">{{order.time}}</p>
+      <span class="badge"
+        [ngClass]="order.available ? 'bg-info': 'bg-danger'">{{order.available ? 'Available': 'Reserved'}}</span>
+      <button class="btn btn-success" *ngIf="order.available" (click)="openDialog(order)">Order</button>
+    </div>
+  </div>
 </div>
