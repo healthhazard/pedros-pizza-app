@@ -54,7 +54,7 @@
                     <input matInput placeholder="Bemerkung" formControlName="comment" />
                 </mat-form-field>
                 <button type="button" mat-raised-button color="primary" class="p-2" (click)="onSubmit()"
-                    [disabled]="!orderForm.invalid">
+                    [disabled]="orderForm.invalid">
                     Bestellen
                 </button>
             </div>
