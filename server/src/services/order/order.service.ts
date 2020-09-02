@@ -43,9 +43,21 @@ export class AppOrderService {
     const ts = new Date();
     order['timestamp'] = ts.toLocaleString();
     order['available'] = false;
-    const oldOrders = this.orders$.getValue();
-    const newOrders = [...oldOrders, order];
-    this.db.get('orders').push(order).write();
-    this.orders$.next(newOrders);
+    const allOrders = this.orders$.getValue();
+
+    for (let item of allOrders) {
+      if (item['time'] == order['time'] && item['available'] == true) {
+        let i = allOrders.indexOf(item);
+        allOrders[i] = order;
+      }
+    }
+
+    this.db
+      .get('orders')
+      .find({ time: order['time'], available: true })
+      .assign(order)
+      .write();
+
+    this.orders$.next(allOrders);
   }
 }
