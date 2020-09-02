@@ -39,10 +39,33 @@ body {
   font-family: "ChunkFive-Regular", sans-serif;
 }
 
+//custom scroll bar 
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+  border-radius: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(54, 54, 54, .3);
+  border-radius: .5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: .5em;
+}
+
 // overriding bootstrap css
 .btn-success {
   background-color: #1DBF73;
   border-color: #1DBF73;
+  color: #fff;
+
+  &:disabled {
+    color: #fff !important;
+    opacity: 0.5;
+  }
 }
 
 .badge {
@@ -54,11 +77,6 @@ body {
 }
 
 // overriding angular material css
-.mat-tab-header {
-  border-bottom: 1px solid rgba(0, 0, 0, .12);
-  border-top: 1px solid rgba(0, 0, 0, .12);
-}
-
 .mat-tab-labels {
   padding: 0.5rem;
 }
@@ -69,6 +87,22 @@ body {
   }
 }
 
+.mat-dialog-title {
+  margin: 0 0 1rem !important;
+  padding: 1rem !important;
+  box-shadow: 0 0.125em 0.25em rgba(10, 10, 10, .1);
+}
+
+.mat-dialog-actions {
+  margin-bottom: 0 !important;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, .06);
+}
+
+.mat-dialog-content {
+  margin: 0 !important;
+}
+
 .mat-dialog-container {
   padding: 0 !important;
+  overflow: hidden !important;
 }

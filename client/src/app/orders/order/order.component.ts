@@ -56,7 +56,6 @@ export class AppOrderComponent implements OnInit {
       () => { },
       (e) => { this.showError() },
       () => {
-        this.dialogRef.close()
         this.orderForm.reset()
         this.showSuccess()
       });
