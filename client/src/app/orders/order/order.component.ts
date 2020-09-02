@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { AppService } from 'src/app/app.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-order',
@@ -30,6 +31,7 @@ export class AppOrderComponent implements OnInit {
   constructor(
     private readonly formBuilder: FormBuilder,
     private readonly appService: AppService,
+    private toastr: ToastrService,
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef: MatDialogRef<AppOrderComponent>
   ) { }
@@ -38,20 +40,26 @@ export class AppOrderComponent implements OnInit {
     this.setTime();
   }
 
-  setTime() {
+  setTime(): void {
     this.orderForm.controls['time'].setValue(this.data.order.time)
   }
 
+  showSuccess(): void {
+    this.toastr.success('Hey, your order was successfully placed!');
+  }
+  showError(): void {
+    this.toastr.error(`Couldn't place order!`, 'Try again.');
+  }
+
   onSubmit(): void {
-    this.appService.sendOrder(this.orderForm.value).subscribe({
-      error: (error) => {
-        console.log(error);
-      },
-      complete: () => {
+    this.appService.sendOrder(this.orderForm.value).subscribe(
+      () => { },
+      (e) => { this.showError() },
+      () => {
         this.dialogRef.close()
-        this.orderForm.reset();
-      },
-    });
+        this.orderForm.reset()
+        this.showSuccess()
+      });
   }
 
 }

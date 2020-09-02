@@ -2,7 +2,7 @@
     <h3 class="card-header text-center p-3">
         Time: {{data.order.time}}
     </h3>
-    <div class="card-body p-5 pb-4">
+    <div class="card-body px-5 py-4">
         <form [formGroup]="orderForm">
             <div class="row">
                 <div class="col-6 col-md-4">
@@ -53,7 +53,8 @@
                     <mat-label>Notiz</mat-label>
                     <input matInput placeholder="Bemerkung" formControlName="comment" />
                 </mat-form-field>
-                <button type="button" mat-raised-button color="primary" class="p-2" (click)="onSubmit()">
+                <button type="button" mat-raised-button color="primary" class="p-2" (click)="onSubmit()"
+                    [disabled]="!orderForm.invalid">
                     Bestellen
                 </button>
             </div>

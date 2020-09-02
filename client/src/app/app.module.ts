@@ -21,7 +21,6 @@ const appModules = [AppRoutingModule, AppMenuModule, AppOrdersModule];
 @NgModule({
   declarations: [AppComponent],
   imports: [...ngModules, ...matModules, ...appModules],
-  providers: [,],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
